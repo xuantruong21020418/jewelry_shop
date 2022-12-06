@@ -1,15 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 22, 2022 at 04:39 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.11
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 06, 2022 at 05:10 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone = "+07:00";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -30,7 +30,7 @@ SET time_zone = "+07:00";
 CREATE TABLE `adminlogin` (
   `Admin_email` varchar(250) NOT NULL,
   `Admin_password` varchar(50) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `adminlogin`
@@ -51,7 +51,14 @@ CREATE TABLE `cartdetail` (
   `price` int(11) NOT NULL,
   `quentity` int(11) NOT NULL,
   `image` varchar(250) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `cartdetail`
+--
+
+INSERT INTO `cartdetail` (`Id`, `name`, `price`, `quentity`, `image`) VALUES
+(5, 'Ring1', 26, 2, 'upload/ring1.png');
 
 -- --------------------------------------------------------
 
@@ -65,15 +72,15 @@ CREATE TABLE `contactusdetail` (
   `Address` varchar(250) NOT NULL,
   `Email` varchar(250) NOT NULL,
   `Message` varchar(250) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `contactusdetail`
 --
 
 INSERT INTO `contactusdetail` (`Name`, `Phone`, `Address`, `Email`, `Message`) VALUES
-('Asim', '03129211293', 'Hussainabad', 'Asim@gmail.com', 'hello'),
-('Asim', '03129211293', 'Hussainabad', 'fa19bsse0032@maju.edu.pk', 'hello');
+('Trường', '03129211293', 'Hà Nội', 'truong@gmail.com', 'hello'),
+('Trường', '03129211293', 'Hà Nội', 'truong@vnu.edu.vn', 'hello');
 
 -- --------------------------------------------------------
 
@@ -85,23 +92,24 @@ CREATE TABLE `orderdetails` (
   `OrderId` int(11) NOT NULL,
   `email` varchar(250) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `orderdetails`
 --
 
 INSERT INTO `orderdetails` (`OrderId`, `email`, `Date`) VALUES
-(1, 'fa19bsse0032@maju.edu.pk', '2022-06-19 14:26:36'),
-(2, 'fa19bsse0032@maju.edu.pk', '2022-06-19 14:30:03'),
-(3, 'asimanis223@gmail.com', '2022-06-20 11:18:26'),
-(4, 'fa19bsse0032@maju.edu.pk', '2022-06-20 15:06:48'),
-(5, 'fa19bsse0032@maju.edu.pk', '2022-06-21 13:38:18'),
-(6, 'fa19bsse0032@maju.edu.pk', '2022-06-21 13:42:49'),
-(7, 'asimanis223@gmail.com', '2022-06-21 13:46:40'),
-(8, 'asimanis223@gmail.com', '2022-06-21 13:49:36'),
-(9, 'asimanis223@gmail.com', '2022-06-21 13:57:58'),
-(10, 'fa19bsse0032@maju.edu.pk', '2022-06-21 14:06:09');
+(1, 'truong@gmail.com', '2022-12-06 15:07:47'),
+(2, 'truong2@gmail.com', '2022-12-06 15:09:06'),
+(3, 'nhaphuong@gmail.com', '2022-12-06 15:09:06'),
+(4, 'truong@gmail.com', '2022-12-06 15:09:06'),
+(5, 'truong@gmail.com', '2022-12-06 15:09:06'),
+(6, 'truong2@gmail.com', '2022-12-06 15:09:06'),
+(7, 'truong2@gmail.com', '2022-12-06 15:09:06'),
+(8, 'truong@gmail.com', '2022-12-06 15:09:06'),
+(9, 'truong2@gmail.com', '2022-12-06 15:09:06'),
+(10, 'truong@gmail.com', '2022-12-06 15:09:06'),
+(11, 'truong@gmail.com', '2022-12-06 15:01:36');
 
 -- --------------------------------------------------------
 
@@ -115,23 +123,24 @@ CREATE TABLE `paymentdeatils` (
   `Email` varchar(250) NOT NULL,
   `Name` varchar(250) NOT NULL,
   `Total` int(11) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `paymentdeatils`
 --
 
 INSERT INTO `paymentdeatils` (`Id`, `OrderId`, `Email`, `Name`, `Total`) VALUES
-(1, 1, 'fa19bsse0032@maju.edu.pk', 'Asim Anis', 3913),
-(2, 2, 'fa19bsse0032@maju.edu.pk', 'Asim Anis', 475),
-(3, 3, 'asimanis223@gmail.com', 'Asim Anis', 225),
-(4, 4, 'fa19bsse0032@maju.edu.pk', 'Asim', 200),
-(5, 5, 'fa19bsse0032@maju.edu.pk', 'Asim', 300),
-(6, 6, 'fa19bsse0032@maju.edu.pk', 'Asim Anis', 430),
-(7, 7, 'asimanis223@gmail.com', 'Asim Anis', 250),
-(8, 8, 'asimanis223@gmail.com', 'Asim Anis', 300),
-(9, 9, 'asimanis223@gmail.com', 'Asim Anis', 690),
-(10, 10, 'fa19bsse0032@maju.edu.pk', 'Asim', 300);
+(1, 1, 'truong@gmail.com', 'Trường Trần', 3913),
+(2, 2, 'truong2@gmail.com', 'Trường Vũ', 475),
+(3, 3, 'nhaphuong@gmail.com', 'Nhã Phương', 225),
+(4, 4, 'truong@gmail.com', 'Trường Trần', 200),
+(5, 5, 'truong@gmail.com', 'Trường Trần', 300),
+(6, 6, 'truong2@gmail.com', 'Trường Vũ', 430),
+(7, 7, 'truong2@gmail.com', 'Trường Vũ', 250),
+(8, 8, 'truong@gmail.com', 'Trường Trần', 300),
+(9, 9, 'truong2@gmail.com', 'Trường Vũ', 690),
+(10, 10, 'truong@gmail.com', 'Trường Trần', 300),
+(11, 11, 'truong@gmail.com', 'Trường Trần', 52);
 
 -- --------------------------------------------------------
 
@@ -147,7 +156,7 @@ CREATE TABLE `productdetail` (
   `price` int(11) NOT NULL,
   `Rating` int(11) NOT NULL,
   `Description` varchar(250) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `productdetail`
@@ -175,7 +184,7 @@ CREATE TABLE `purchaseitems` (
   `ProductId` int(11) NOT NULL,
   `ProductName` varchar(250) NOT NULL,
   `ProductQuentity` varchar(250) NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `purchaseitems`
@@ -201,7 +210,8 @@ INSERT INTO `purchaseitems` (`Id`, `orderId`, `ProductId`, `ProductName`, `Produ
 (17, 9, 1, 'Chain1', '5'),
 (18, 9, 3, 'chain3', '6'),
 (19, 9, 4, 'chain4', '5'),
-(20, 10, 1, 'Chain1', '6');
+(20, 10, 1, 'Chain1', '6'),
+(21, 11, 5, 'Ring1', '2');
 
 -- --------------------------------------------------------
 
@@ -215,52 +225,21 @@ CREATE TABLE `sign_signout_history` (
   `Status` varchar(20) NOT NULL,
   `Name` varchar(250) NOT NULL,
   `Time` time NOT NULL
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `sign_signout_history`
 --
 
 INSERT INTO `sign_signout_history` (`AccountType`, `Email`, `Status`, `Name`, `Time`) VALUES
-('audi', 'Asim@gmail.com', 'SIGN IN', 'Asim Anis', '05:02:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '09:23:00'),
-('audi', 'Asim@gmail.com', 'SIGN IN', 'Asim Anis', '05:08:00'),
-('audi', 'Asim@gmail.com', 'SIGN OUT', 'Asim Anis', '05:08:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '06:21:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '03:21:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '06:36:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '03:43:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '03:34:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '12:34:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN IN', 'Asim Anis', '07:09:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN OUT', 'Asim Anis', '04:14:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '06:17:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '04:36:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '03:59:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '12:59:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN IN', 'Asim Anis', '04:17:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN OUT', 'Asim Anis', '01:23:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN IN', 'Asim Anis', '04:23:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN OUT', 'Asim Anis', '01:23:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN IN', 'Asim Anis', '04:29:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN OUT', 'Asim Anis', '01:29:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '04:33:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '04:33:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '04:37:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '04:37:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '04:38:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '04:38:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '04:40:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '04:42:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '08:14:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN IN', 'Asim Anis', '06:42:00'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'SIGN OUT', 'Asim Anis', '06:43:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN IN', 'Asim Anis', '06:46:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN OUT', 'Asim Anis', '06:48:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN IN', 'Asim Anis', '06:49:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN OUT', 'Asim Anis', '06:50:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN IN', 'Asim Anis', '06:55:00'),
-('opel', 'asimanis223@gmail.com', 'SIGN OUT', 'Asim Anis', '07:03:00');
+('opel', 'truong@gmail.com', 'SIGN IN', 'Trường Trần', '07:56:00'),
+('opel', 'truong@gmail.com', 'SIGN OUT', 'Trường Trần', '08:13:00'),
+('type1', 'truong@gmail.com', 'SIGN IN', 'Trường Trần', '08:23:00'),
+('type1', 'truong@gmail.com', 'SIGN OUT', 'Trường Trần', '08:23:00'),
+('type1', 'truong@gmail.com', 'SIGN IN', 'Trường Trần', '22:31:00'),
+('type1', 'truong@gmail.com', 'SIGN OUT', 'Trường Trần', '22:31:00'),
+('type1', 'truong2@gmail.com', 'SIGN IN', 'Trường Vũ', '22:42:39'),
+('type1', 'truong2@gmail.com', 'SIGN OUT', 'Trường Vũ', '22:42:45');
 
 -- --------------------------------------------------------
 
@@ -269,22 +248,22 @@ INSERT INTO `sign_signout_history` (`AccountType`, `Email`, `Status`, `Name`, `T
 --
 
 CREATE TABLE `userinfo` (
-  `AccountType` varchar(50) NOT NULL,
-  `email` varchar(250) CHARACTER SET utf8mb4 NOT NULL,
-  `password` varchar(50) NOT NULL,
-  `firstname` varchar(250) NOT NULL,
-  `lastname` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `AccountType` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `firstname` varchar(250) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `lastname` varchar(250) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `userinfo`
 --
 
 INSERT INTO `userinfo` (`AccountType`, `email`, `password`, `firstname`, `lastname`) VALUES
-('opel', 'asimanis223@gmail.com', 'asim3456', 'Asim', 'Anis'),
-('audi', 'asimanis864@gmail.com', 'Asim123', 'Asim', 'Anis'),
-('opel', 'fa19bsse0032@maju.edu.pk', 'Asim123', 'Asim', 'Anis'),
-('audi', 'fa19bsse0050@maju.edu.pk', 'Asad1234', 'Asad', 'Abbasi');
+('type1', 'nhaphuong@gmail.com', 'Phuong123', 'Nhã', 'Phương'),
+('type2', 'thien@gmail.com', 'Thien123', 'Thiên', 'Công'),
+('type1', 'truong2@gmail.com', 'Truong123', 'Trường', 'Vũ'),
+('type1', 'truong@gmail.com', 'Truong1234', 'Trường', 'Trần');
 
 --
 -- Indexes for dumped tables
@@ -348,13 +327,13 @@ ALTER TABLE `userinfo`
 -- AUTO_INCREMENT for table `orderdetails`
 --
 ALTER TABLE `orderdetails`
-  MODIFY `OrderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `OrderId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `paymentdeatils`
 --
 ALTER TABLE `paymentdeatils`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `productdetail`
@@ -366,7 +345,7 @@ ALTER TABLE `productdetail`
 -- AUTO_INCREMENT for table `purchaseitems`
 --
 ALTER TABLE `purchaseitems`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables
@@ -382,13 +361,13 @@ ALTER TABLE `cartdetail`
 -- Constraints for table `paymentdeatils`
 --
 ALTER TABLE `paymentdeatils`
-  ADD CONSTRAINT `purcahseid` FOREIGN KEY (`OrderId`) REFERENCES `orderdetails` (`OrderId`);
+  ADD CONSTRAINT `purcahseid` FOREIGN KEY (`OrderId`) REFERENCES `orderdetails` (`OrderId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `purchaseitems`
 --
 ALTER TABLE `purchaseitems`
-  ADD CONSTRAINT `orderid` FOREIGN KEY (`orderId`) REFERENCES `orderdetails` (`OrderId`);
+  ADD CONSTRAINT `orderid` FOREIGN KEY (`orderId`) REFERENCES `orderdetails` (`OrderId`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
