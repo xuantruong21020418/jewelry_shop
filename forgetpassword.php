@@ -35,7 +35,7 @@ if(isset($_POST['forget']))
             $mail->Password   = "";
             $mail->IsHTML(true);
             $mail->AddAddress($email, $name);
-            $mail->SetFrom("jewelerywebsite54@gmail.com", "Jewellery Website");
+            $mail->SetFrom("jewelerywebsite54@gmail.com", "Jewelry Website");
             $mail->Subject = "Forget Password";
             $content = "<b>Your Password is: $password.</b>";
             $mail->MsgHTML($content); 

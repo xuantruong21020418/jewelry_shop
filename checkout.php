@@ -81,7 +81,7 @@ if(isset($_POST['pay']))
             $mail->Password   = "";
             $mail->IsHTML(true);
             $mail->AddAddress($email, $username);
-            $mail->SetFrom("jewelerywebsite54@gmail.com", "Jewellery Website");
+            $mail->SetFrom("jewelerywebsite54@gmail.com", "Jewelry Website");
             $mail->Subject = "Payment Success";
             $content = 'Payment Success
             <b>Your Total is : '.$productTotal.'</b>
@@ -411,7 +411,7 @@ else if(isset($guestpay))
                         <?php
                         if($total > 0)
                         {
-                                echo "$".$total + 2.52; 
+                                echo "$".($total + 2.52); 
                         }
                         else
                         {

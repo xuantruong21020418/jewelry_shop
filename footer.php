@@ -2,7 +2,7 @@
         <div id="line">
 
         </div>
-        <p>@2022 Domain.All right Reserved</p>
+        <p>@2022. All right reserved</p>
         <div id="footernav">
             <ul>
 

@@ -63,7 +63,7 @@ if(isset($_POST['submit']))
             <div class="row">
                 <div class="col-md-6">
                     <h6 class="heading">Contact Us</h6>
-                    <h1 class="h1body">For any query contact us</h1>
+                    <h1 class="h1body">Any questions? Send messages.</h1>
                     <div class="contact">
                         <div class="col-md-12 w-sm-100 form-group" id="CategoryEmail">
                        <form action="" method="post">
@@ -78,7 +78,7 @@ if(isset($_POST['submit']))
                           <label for="">Message</label>
                           <textarea id="message" width="300" type="text" name="message"
                               placeholder="Please enter Meesage" Required></textarea>
-                          <button class="contactbtn" type="submit" name="submit">Learn More</button>
+                          <button class="contactbtn" type="submit" name="submit">Send</button>
                        </form>
                         </div>
 

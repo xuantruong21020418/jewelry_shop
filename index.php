@@ -40,7 +40,7 @@ include 'connect.php';
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h6 class="heading">About US</h6>
+                    <h6 class="heading">About Us</h6>
                     <h1 class="h1body">Where Class Meets Glamour</h1>
                     <div>
                         <p class="text-justify">
@@ -136,7 +136,7 @@ include 'connect.php';
                 </div>
             </div>
             <div id="CategoryFooter">
-                <h4>Subscribe Our Newsletter</h4>
+                <h4>Subscribe To Our Newsletters</h4>
                 <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quis cum quas
                     voluptate excepturi
                     provident tempore itaque officia eveniet sunt. Lorem ipsum dolor sit amet.</p>
