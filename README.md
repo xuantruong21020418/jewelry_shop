@@ -19,3 +19,5 @@ Website quản lý cửa hàng, khách hàng có thể tạo tài khoản để 
 * Bootstrap
 * JavaScript
 
+# Database
+<img src="https://user-images.githubusercontent.com/100185886/206215557-df73b87e-7e6d-416f-833d-b1e7097e932c.png" alt="..." width="600">
