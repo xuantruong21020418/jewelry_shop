@@ -189,9 +189,9 @@ if(isset($_POST['registerd']))
                         <label>Create</label>
                         <select name="AccountType" id="cars" Required>
                             <option selected>Account Type</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                            <option value="personal">Personal</option>
+                            <option value="company">Company</option>
+                            <option value="dealer">Dealer</option>
                         </select>
                     </div>
                     <input type="text" name="email" placeholder="Please enter Email" Required>

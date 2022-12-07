@@ -1,7 +1,7 @@
 <div class="container bg-dark ">
         <div class="row menu">
 
-            <div class="col-md-3 col-sm-3 menu-icon"><img src="images/logo.png" alt="" srcset=""></div>
+            <div class="col-md-3 col-sm-3 menu-icon"><img src="images/logo.png" alt="" srcset="" style="width:35%;height:auto;"></div>
             <div id="button" class="col-md-3 col-sm-3 menu-button"><i class="fa fa-bars"></i></div>
             <div id="nav2" class="col-md-7">
                 <ul>
