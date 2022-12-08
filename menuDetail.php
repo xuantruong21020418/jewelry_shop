@@ -155,7 +155,7 @@ if(isset($_POST['Submit']))
                             </p>
                         </div>
                         <input id="rate" type="hidden" name="rating" value="">
-                        <button type="submit" name="Submit" data-toggle="tooltip" data-placement="bottom" title="To confirm Rating click on This button">Shop Now</button>
+                        <button type="submit" name="Submit" data-toggle="tooltip" data-placement="bottom" title="To confirm Rating click on This button">Add To Cart</button>
                 </form>
             </div>
         </div>

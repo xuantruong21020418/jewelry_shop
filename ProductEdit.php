@@ -52,7 +52,7 @@ if(isset($_POST['submit']))
 
     <div id="cover" class="container-fluid">
         <div id="divCover" class="container border">
-            <h1 class="h1">Product Edit</p>
+            <h1 class="h1">Add Product</p>
         </div>
     </div>
 
@@ -78,7 +78,7 @@ if(isset($_POST['submit']))
                                 <label for="">Description</label>
                                 <textarea id="message" width="300" type="text" name="message"
                                  placeholder="Please enter Meesage" ></textarea>
-                                <button class="contactbtn" type="submit" name="submit">Enter</button>
+                                <button class="contactbtn" type="submit" name="submit">Add</button>
                             </form>
                         </div>
 

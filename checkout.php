@@ -306,11 +306,11 @@ else if(isset($guestpay))
       <input id="email" type="text" name="email" placeholder="Please enter Email">
       <input id="name" type="text" name="name" placeholder="Please enter Name">
       <label for="">Card Number</label> 
-      <input type="text" name="card_num" placeholder="Please enter Email">
+      <input type="text" name="card_num" placeholder="Please enter your card number">
       <label for="">Expiry Month</label>
-      <input type="text" name="card_exp_month" placeholder="please enter Card Expiry Month">
+      <input type="text" name="card_exp_month" placeholder="please enter Card Expired Month">
       <label for="">Expiry Year</label>
-      <input type="text" name="card_exp_year" placeholder="please enter Card Expiry Month">
+      <input type="text" name="card_exp_year" placeholder="please enter Card Expired Month">
       <label for="">CV Code</label>
       <input type="text" name="CV_code" placeholder="please enter CV Code" autocomplete="off">
       </div>
@@ -349,9 +349,9 @@ else if(isset($guestpay))
                
                   
                     if(isset($_POST['promo'])) {
-                        if($_POST['promocode'] == "hello69")
+                        if($_POST['promocode'] == "LEHONGHAI")
                         {     
-                         $coupon = 0.30;
+                         $coupon = 0.50;
                          $_SESSION['coupon'] = true;
                         }
                         else

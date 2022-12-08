@@ -29,7 +29,7 @@ button
                     <li>
                         <h5>|</h5>
                     </li>
-                    <li><a href="ProductEdit.php">Product Edit</a></li>
+                    <li><a href="ProductEdit.php">Add Product</a></li>
                     <li>
                         <h5>|</h5>
                     </li>

@@ -167,7 +167,7 @@ if(isset($_POST['shop']))
                     <input type="hidden" id="idarray" name="idarray" value="">
                     <form action="" method="post">
                     <button type="submit" name="shop"
-                        class="cart-body-footer-shop">Continue Shopping</button>
+                        class="cart-body-footer-shop">Buy</button>
                         </form>
                     <button type="sumbit" name="submit" onclick="update()" class="cart-body-footer-update"><i
                             class="fa fa-spinner"></i> update Cart</button>

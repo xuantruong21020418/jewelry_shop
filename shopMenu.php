@@ -42,7 +42,7 @@ if(isset($_GET['name']))
                      <div class="productCategory">
                            <a href="shopMenu.php?name=Rings">Rings</a>
                            <a href="shopMenu.php?name=Chains">Chains</a>
-                           <a id="cat3" href="shopMenu.php">Others</a>
+                           <a id="cat3" href="shopMenu.php">All Products</a>
                      </div>
                </div>
                 <div id="productBody" class="shopbody">

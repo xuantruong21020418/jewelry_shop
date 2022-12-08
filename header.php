@@ -28,7 +28,7 @@ foreach($result as $value)
                     <li>
                         <h5>|</h5>
                     </li>
-                    <li><a href="Contactus.php">Contact US</a></li>
+                    <li><a href="Contactus.php">Contact Us</a></li>
                 </ul>
             </div>
             <div id="nav3" class="col-md-2">

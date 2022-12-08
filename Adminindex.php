@@ -41,7 +41,7 @@ if(!isset($_SESSION['loggedinadmin']))
 
     <div id="cover" class="container-fluid">
         <div id="divCover" class="container border">
-            <h1 class="h1">Admin Deshboard</p>
+            <h1 class="h1">Admin Dashboard</p>
         </div>
     </div>
     <div class="container">

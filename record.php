@@ -73,7 +73,7 @@ Where `paymentdeatils`.`OrderId` = '".$_SESSION['orderid']."' AND `paymentdeatil
     </div>
     <div class="container">
         <span>
-            The Total is <?php echo $total;?>
+            Total payment: <?php echo "$" . $total;?>
         </span>
     </div>
     <div class="container">
